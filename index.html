@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamdard</title>
+    <!-- <link href="style.css" rel="stylesheet" media="all"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            font-family: "Arial",sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .footer {
+            background-color: #fac9c5;
+            display: flex;
+            display: -webkit-flex;
+            padding: 25px 10px;
+            align-items: center;
+        }
+
+        .inter-links {
+            display: flex;
+            display: -webkit-flex;
+            flex-basis: 100%;
+            justify-content: space-between;
+        }
+
+        .buy-now {
+            flex-basis: 15%;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            display: none;
+        }
+
+        .inter-links a {
+            display: inline-block;
+            background: rgb(223,205,158);
+background: -moz-linear-gradient(180deg, rgba(223,205,158,1) 0%, rgba(251,240,209,1) 50%, rgba(223,205,158,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(223,205,158,1) 0%, rgba(251,240,209,1) 50%, rgba(223,205,158,1) 100%);
+background: linear-gradient(180deg, rgba(223,205,158,1) 0%, rgba(251,240,209,1) 50%, rgba(223,205,158,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dfcd9e",endColorstr="#dfcd9e",GradientType=1);
+            padding: 10px 10px 0 10px;
+            border-radius: 50px;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -o-border-radius: 50px;
+            line-height: 25px;
+            box-shadow: 1px 3px 3px #000000a6;
+            -webkit-box-shadow: 1px 3px 3px #000000a6;
+            -moz-box-shadow: 1px 3px 3px #000000a6;
+        }
+        .desktop-img{
+                display: none;
+            }
+            .mobile-img {
+                display: block;
+            }
+
+        @media (min-width:600px){
+            .footer {
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+            .desktop-img{
+                display: block;
+            }
+            .mobile-img {
+                display: none;
+            }
+
+            .buy-now {
+               display: block;
+    font-size: 30px;
+            }
+            .inter-links {
+                flex-basis: 85%;
+            }
+            .inter-links a {
+                padding: 10px 28px 0 28px;
+            }
+        }
+
+        @media (max-width:599px){
+            .inter-links a:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="img-wrapper">
+            <img src="images/hero-image.jpg" alt="desktop" class="desktop-img">
+            <img src="images/hero-image-mobile.jpg" alt="mobile" class="mobile-img">
+        </div>
+        <div class="footer">
+            <div class="buy-now">Buy now on:</div>
+            <div class="inter-links">
+                <a href=""><img src="images/amazon.png" alt="amazon"></a>
+                <a href=""><img src="images/amazon.png" alt="amazon"></a>
+                <a href=""><img src="images/amazon.png" alt="amazon"></a>
+                <a href=""><img src="images/amazon.png" alt="amazon"></a>
+                <a href=""><img src="images/amazon.png" alt="amazon"></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
