@@ -45,11 +45,11 @@
             display: -webkit-flex;
             padding: 25px 10px;
             align-items: center;
-            /* position: fixed;
+            position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            z-index: 9; */
+            z-index: 9;
         }
 
         .inter-links {
@@ -90,12 +90,16 @@
             display: none;
         }
 
-        .mobile-img {
-            display: block;
+        .mobile-img-m {
+            display: none;
         }
 
         .inter-links a:not(:last-child) {
             margin-right: 12px;
+        }
+
+        .mobile-img-xs {
+            display:none
         }
 
         @media (min-width:769px) {
@@ -108,7 +112,7 @@
                 display: block;
             }
 
-            .mobile-img {
+            .mobile-img-m, .mobile-img-xs  {
                 display: none;
             }
 
@@ -178,6 +182,17 @@
                 padding-bottom: 51px;
             } */
         }
+
+        @media (min-width:700px) and (max-width:768px){
+            .mobile-img-m{
+                display: block;
+            }
+        }
+        @media (min-width:300px) and (max-width:680px){
+            .mobile-img-xs{
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -185,7 +200,8 @@
     <section class="container">
         <div class="img-wrapper">
             <img src="images/hero-image.jpg" alt="desktop" class="desktop-img">
-            <img src="images/hero-image-mobile1.jpg" alt="mobile" class="mobile-img">
+            <img src="images/hero-image-mobile1.jpg" alt="mobile medium" class="mobile-img-m">
+            <img src="images/mobile_XS.jpg" alt="mobile medium" class="mobile-img-xs">
         </div>
         <div class="footer">
             <div class="buy-now">Buy now on:</div>
