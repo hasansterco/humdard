@@ -8,6 +8,17 @@
     <title>Hamdard</title>
     <!-- <link href="style.css" rel="stylesheet" media="all"> -->
     <style>
+        @font-face {
+            font-family: 'swiss';
+            src: url('font/swiss.eot');
+            src: url('font/swiss.eot?#iefix') format('embedded-opentype'),
+                url('font/swiss.woff2') format('woff2'),
+                url('font/swiss.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -20,7 +31,7 @@
         html {
             width: 100%;
             height: 100%;
-            font-family: "Arial", sans-serif;
+            font-family: 'swiss';
         }
 
         img {
@@ -34,6 +45,11 @@
             display: -webkit-flex;
             padding: 25px 10px;
             align-items: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9;
         }
 
         .inter-links {
@@ -41,31 +57,32 @@
             display: -webkit-flex;
             flex-basis: 100%;
             justify-content: space-between;
+            align-items: center;
         }
 
         .buy-now {
-            flex-basis: 15%;
+            flex-basis: 20%;
             font-weight: 500;
             letter-spacing: 0.02em;
         }
 
         .inter-links a {
             display: inline-block;
-            background: rgb(223, 205, 158);
+            /* background: rgb(223, 205, 158);
             background: -moz-linear-gradient(180deg, rgba(223, 205, 158, 1) 0%, rgba(251, 240, 209, 1) 50%, rgba(223, 205, 158, 1) 100%);
             background: -webkit-linear-gradient(180deg, rgba(223, 205, 158, 1) 0%, rgba(251, 240, 209, 1) 50%, rgba(223, 205, 158, 1) 100%);
             background: linear-gradient(180deg, rgba(223, 205, 158, 1) 0%, rgba(251, 240, 209, 1) 50%, rgba(223, 205, 158, 1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dfcd9e", endColorstr="#dfcd9e", GradientType=1);
-            padding: 6px 5px 0 5px;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dfcd9e", endColorstr="#dfcd9e", GradientType=1); */
+            /* padding: 6px 5px 0 5px; */
             ;
-            border-radius: 50px;
+            /* border-radius: 50px;
             -moz-border-radius: 50px;
             -webkit-border-radius: 50px;
-            -o-border-radius: 50px;
+            -o-border-radius: 50px; */
             line-height: 20px;
-            box-shadow: 1px 3px 3px #000000a6;
+            /* box-shadow: 1px 3px 3px #000000a6;
             -webkit-box-shadow: 1px 3px 3px #000000a6;
-            -moz-box-shadow: 1px 3px 3px #000000a6;
+            -moz-box-shadow: 1px 3px 3px #000000a6; */
         }
 
         .desktop-img {
@@ -76,7 +93,15 @@
             display: block;
         }
 
+        .inter-links a:not(:last-child) {
+            margin-right: 12px;
+        }
+
         @media (min-width:600px) {
+            .img-wrapper {
+                padding-bottom: 128px;
+            }
+
             .footer {
                 padding-right: 20px;
                 padding-left: 20px;
@@ -91,17 +116,37 @@
             }
 
             .buy-now {
-                font-size: 30px;
+                font-size: 35px;
             }
 
             .inter-links {
-                flex-basis: 85%;
+                flex-basis: 80%;
+                margin-top: 8px;
             }
 
-            .inter-links a {
-                padding: 13px 24px 6px 24px;
+            /* .inter-links a:nth-child(1) {
+                padding: 22px 24px 7px;
             }
 
+            .inter-links a:nth-child(2) {
+                padding: 15px 25px 14px;
+            }
+
+            .inter-links a:nth-child(3) {
+                padding: 22px 24px 18px;
+            }
+
+            .inter-links a:nth-child(4) {
+                padding: 14px 20px 8px 20px;
+            }
+
+            .inter-links a:nth-child(5) {
+                padding: 9px 12px 7px 12px;
+            } */
+
+            .inter-links a:not(:last-child) {
+                margin-right: 30px;
+            }
         }
 
         @media (max-width:599px) {
@@ -111,7 +156,7 @@
 
             .footer {
                 flex-direction: column;
-                position: relative;
+                padding: 16px 10px 10px;
             }
 
             .buy-now {
@@ -125,6 +170,10 @@
                 border-top-left-radius: 8px;
                 -webkit-border-top-left-radius: 8px;
                 -moz-border-top-left-radius: 8px;
+            }
+
+            .img-wrapper {
+                padding-bottom: 64px;
             }
         }
     </style>
@@ -140,15 +189,15 @@
             <div class="buy-now">Buy now on:</div>
             <div class="inter-links">
                 <a href="https://www.amazon.in/dp/B06ZZMFB59/ref=cm_sw_r_wa_apa_glt_i_JT5DK0RJ4WZPAMN1WCRR"><img
-                        src="images/amazon.png" alt="amazon"></a>
-                <a href="https://www.amazon.in/dp/B06ZZMFB59/ref=cm_sw_r_wa_apa_glt_i_JT5DK0RJ4WZPAMN1WCRR"><img
-                        src="images/flipkart.png" alt="flipkart"></a>
-                <a href="https://www.amazon.in/dp/B06ZZMFB59/ref=cm_sw_r_wa_apa_glt_i_JT5DK0RJ4WZPAMN1WCRR"><img
-                        src="images/bigbasket.png" alt="bigbasket"></a>
-                <a href="https://www.amazon.in/dp/B06ZZMFB59/ref=cm_sw_r_wa_apa_glt_i_JT5DK0RJ4WZPAMN1WCRR"><img
-                        src="images/milkbasket.png" alt="milkbasket"></a>
-                <a href="https://www.amazon.in/dp/B06ZZMFB59/ref=cm_sw_r_wa_apa_glt_i_JT5DK0RJ4WZPAMN1WCRR"><img
-                        src="images/groffers.png" alt="groffers"></a>
+                        src="images/newicon/amazon.png" alt="amazon"></a>
+                <a
+                    href="https://www.flipkart.com/hamdard-rooh-afza-sharbat-syrup-rose-750-ml-rose/p/itm644ee1991817e?pid=CNCFG7F2TGDGNGQJ&lid=LSTCNCFG7F2TGDGNGQJHTTMGV&marketplace=FLIPKART&q=roohafza+sharbat+bottle&store=eat%2Fvqg&srno=s_1_5&otracker=AS_Query_OrganicAutoSuggest_2_8_na_na_ps&otracker1=AS_Query_OrganicAutoSuggest_2_8_na_na_ps&fm=organic&iid=e79a7704-1342-4865-86ad-406e3676423e.CNCFG7F2TGDGNGQJ.SEARCH&ppt=sp&ppn=sp&ssid=hdodgbawfk0000001620798264105&qH=29a4e49ffab1d0a3"><img
+                        src="images/newicon/flipkart.png" alt="flipkart"></a>
+                <a href="https://www.bigbasket.com/pd/256091/roohafza-sharbat-750-ml-bottle/?nc=as&q=rooh"><img
+                        src="images/newicon/bigbasket.png" alt="bigbasket"></a>
+                <a href="https://grofers.com/prn/hamdard-rooh-afza-sharbat-rose-bottle/prid/277"><img
+                        src="images/newicon/milkbasket.png" alt="milkbasket"></a>
+                <a href="https://www.milkbasket.com/"><img src="images/newicon/groffers.png" alt="groffers"></a>
             </div>
         </div>
     </section>
