@@ -8,17 +8,17 @@
     <title>Hamdard</title>
     <!-- <link href="style.css" rel="stylesheet" media="all"> -->
     <style>
+        @font-face {
+            font-family: 'swiss';
+            src: url('font/swiss.eot');
+            src: url('font/swiss.eot?#iefix') format('embedded-opentype'),
+                url('font/swiss.woff2') format('woff2'),
+                url('font/swiss.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
 
-@font-face {
-    font-family: 'swiss';
-    src: url('font/swiss.eot');
-    src: url('font/swiss.eot?#iefix') format('embedded-opentype'),
-         url('font/swiss.woff2') format('woff2'),
-         url('font/swiss.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+        }
 
-}
         * {
             margin: 0;
             padding: 0;
@@ -45,6 +45,11 @@
             display: -webkit-flex;
             padding: 25px 10px;
             align-items: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9;
         }
 
         .inter-links {
@@ -139,6 +144,10 @@
             .inter-links a:not(:last-child) {
                 margin-right: 30px;
             }
+
+            .img-wrapper {
+                padding-bottom: 128px;
+            }
         }
 
         @media (max-width:768px) {
@@ -148,7 +157,7 @@
 
             .footer {
                 flex-direction: column;
-                position: relative;
+                /* position: relative; */
                 padding: 16px 10px 10px;
             }
 
@@ -163,6 +172,10 @@
                 border-top-left-radius: 8px;
                 -webkit-border-top-left-radius: 8px;
                 -moz-border-top-left-radius: 8px;
+            }
+
+            .img-wrapper {
+                padding-bottom: 69px;
             }
         }
     </style>
@@ -179,15 +192,15 @@
             <div class="inter-links">
 
                 <a href="https://www.amazon.in/dp/B06ZZMFB59/ref=cm_sw_r_wa_apa_glt_i_JT5DK0RJ4WZPAMN1WCRR"><img
-                    src="images/newicon/amazon.png" alt="amazon"></a>
-            <a
-                href="https://www.flipkart.com/hamdard-rooh-afza-sharbat-syrup-rose-750-ml-rose/p/itm644ee1991817e?pid=CNCFG7F2TGDGNGQJ&lid=LSTCNCFG7F2TGDGNGQJHTTMGV&marketplace=FLIPKART&q=roohafza+sharbat+bottle&store=eat%2Fvqg&srno=s_1_5&otracker=AS_Query_OrganicAutoSuggest_2_8_na_na_ps&otracker1=AS_Query_OrganicAutoSuggest_2_8_na_na_ps&fm=organic&iid=e79a7704-1342-4865-86ad-406e3676423e.CNCFG7F2TGDGNGQJ.SEARCH&ppt=sp&ppn=sp&ssid=hdodgbawfk0000001620798264105&qH=29a4e49ffab1d0a3"><img
-                    src="images/newicon/flipkart.png" alt="flipkart"></a>
-            <a href="https://www.bigbasket.com/pd/256091/roohafza-sharbat-750-ml-bottle/?nc=as&q=rooh"><img
-                    src="images/newicon/bigbasket.png" alt="bigbasket"></a>
-            <a href="https://grofers.com/prn/hamdard-rooh-afza-sharbat-rose-bottle/prid/277"><img
-                    src="images/newicon/milkbasket.png" alt="milkbasket"></a>
-            <a href="https://www.milkbasket.com/"><img src="images/newicon/groffers.png" alt="groffers"></a>
+                        src="images/newicon/amazon.png" alt="amazon"></a>
+                <a
+                    href="https://www.flipkart.com/hamdard-rooh-afza-sharbat-syrup-rose-750-ml-rose/p/itm644ee1991817e?pid=CNCFG7F2TGDGNGQJ&lid=LSTCNCFG7F2TGDGNGQJHTTMGV&marketplace=FLIPKART&q=roohafza+sharbat+bottle&store=eat%2Fvqg&srno=s_1_5&otracker=AS_Query_OrganicAutoSuggest_2_8_na_na_ps&otracker1=AS_Query_OrganicAutoSuggest_2_8_na_na_ps&fm=organic&iid=e79a7704-1342-4865-86ad-406e3676423e.CNCFG7F2TGDGNGQJ.SEARCH&ppt=sp&ppn=sp&ssid=hdodgbawfk0000001620798264105&qH=29a4e49ffab1d0a3"><img
+                        src="images/newicon/flipkart.png" alt="flipkart"></a>
+                <a href="https://www.bigbasket.com/pd/256091/roohafza-sharbat-750-ml-bottle/?nc=as&q=rooh"><img
+                        src="images/newicon/bigbasket.png" alt="bigbasket"></a>
+                <a href="https://grofers.com/prn/hamdard-rooh-afza-sharbat-rose-bottle/prid/277"><img
+                        src="images/newicon/milkbasket.png" alt="milkbasket"></a>
+                <a href="https://www.milkbasket.com/"><img src="images/newicon/groffers.png" alt="groffers"></a>
             </div>
         </div>
     </section>
